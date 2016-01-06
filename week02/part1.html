@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="color_guess_game.js"></script>
+    </head>
+    <body onload="do_game()">
+        
+        <script type="text/javascript">
+            
+            var colors = ['blue', 'cyan', 'gold', 'gray','green', 'magenta', 'orange', 'red', 'white', 'yellow'];
+            var target;
+            var guess;
+            var finished = false;
+            
+            function do_game() {
+
+                // Random target color
+                target = colors[Math.floor(Math.random() * colors.length)];
+                
+                console.log(target);
+                
+                while (!finished) {
+                    
+                    var msg = "I am thinking of one these colors:";
+                    msg += "\n\n" + colors;
+                    msg += "\n\n" + "What color am I thinking of?";
+
+                    guess = prompt(msg);
+                    
+                    finished = (guess == target);
+                }
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Simple Web Page</title>
+        <meta name="author" content="Ythalo Rossy S. Lira">
+    </head>
+    <body>
+        <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post">
+            
+            <h1>Please enter your details for our dating website!</h1>
+    
+    		<fieldset>
+    			<legend>Your Face</legend>
+    			
+    			<label for="avatar">Your image:</label>
+    			<input type="file" id="avatar" required> <br/>
+    			
+    			<img id="preview"/>
+    		</fieldset>
+    		
+    		<fieldset>
+    			<legend>Your general details</legend>
+    			<label for="name">Name:</label>
+    			<input type="text" name="name"/> <br/>
+    			
+    			<label for="gender">Gender:</label>
+    			<input type="radio" name="male"/>Male
+    			<input type="radio" name="female"/>Female <br/>
+    			
+    			<label for="age">Age:</label>
+    			<input type="number" name="age"/> <br/>
+    			
+    			<label for="birthday">Date of Birth:</label>
+    			<input type="date" name="birthday"/> <br/>
+    			
+    			<label for="color">Favorite color:</label>
+    			<input type="color" name="color"/> <br/>
+    			
+    			<label for="country">Which country:</label>
+    			<select name="country">
+    			    <option value="no selection">no selection</option>
+    			    <option value="Brazil">Brazil</option>
+    			    <option value="China">China</option>
+    			    <option value="Germany">Germany</option>
+    			    <option value="France">France</option>
+    			    <option value="England">England</option>
+    			</select>
+    			
+    		</fieldset>		
+    
+            <fieldset>
+                <legend>Your indicators</legend>
+                <label for="height">Height:</label>
+                Short<input name="height" type="range" min="0" max="100" step="10"/>Tall
+                
+                <br />
+                
+                <label for="salary">Salary:</label>
+                Poor<input name="salary" type="range" min="0" max="100" step="10"/>Rich
+            </fieldset>
+    
+            <fieldset>
+                <legend>Your Contact Information</legend>
+                <label for="email">Email:</label>
+                <input type="email" name="email"/> <br/>
+                
+                <label for="mobile">Mobile:</label>
+                <input type="tel" name="mobile"/> <br/>
+                
+                <label for="address">Address:</label>
+                <textarea name="address"></textarea><br/>
+                
+                <label for="contact">Method to contact you:</label>
+                <span name="contact">
+                    <input type="checkbox" name=""/> Email
+                    <input type="checkbox" name=""/> Whatsapp
+                    <input type="checkbox" name=""/> in-app chat
+                </span>
+            </fieldset>
+    
+            <input type="submit" name=""/>	
+        
+        </form>
+    </body>
+</html>
